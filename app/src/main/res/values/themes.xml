@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PayPointRetailer" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/border_grey</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+
+    <style name="Theme.PayPointRetailer" parent="Theme.MaterialComponents.Light.NoActionBar" />
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryOther</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryOther</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="TextSemiBold" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/main_blue</item>
+        <item name="android:fontFamily">@font/poppinssemibold</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_shape</item>
+    </style>
+    <style name="dialog_style" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppBottomSheetDialogThemeNew" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyleNew</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AppModalStyleNew" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/favourites_bottom_shape</item>
+    </style>
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/main_blue</item>
+    </style>
+
+    <style name="progress_color">
+        <item name="colorAccent">@color/main_blue</item> <!-- Whatever color you want-->
+    </style>
+    <style name="RoundedCornersDialog" parent="@style/Theme.MaterialComponents.Dialog">
+        <item name="dialogCornerRadius">20dp</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/main_blue</item>
+        <item name="colorPrimaryDark">@color/grey_light</item>
+        <item name="colorAccent">@color/main_blue</item>
+    </style>
+</resources>

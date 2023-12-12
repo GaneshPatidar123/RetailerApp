@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/background_white_corner">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGiftImage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBuyNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ivGiftImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            android:text="BUY NOW"
+            android:textSize="16dp"
+            android:padding="6dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/red"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvBuyNow"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            tools:text="BUY NOW"
+            android:visibility="gone"
+            android:textSize="13dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/dark_grey"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

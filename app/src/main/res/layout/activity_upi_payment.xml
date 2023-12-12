@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround"
+        tools:context=".View.Activity.addLimit.UpiPaymentActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar_back" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/backGround"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_to_take_a_upi_limit"
+                android:textColor="@color/black_ppi"
+                android:textSize="14dp"
+                app:fontFamily="@font/poppinssemibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_new_vpa"
+                android:textColor="@color/grey_ppi"
+                android:textSize="14dp"
+                app:fontFamily="@font/poppinsregular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFirst" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVPA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="VPA"
+                android:textColor="@color/grey_ppi"
+                android:textSize="14dp"
+                app:fontFamily="@font/poppinsmedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddNew" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llVpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVPA">
+
+
+
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/selectArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:drawableEnd="@drawable/ic_down"
+                    android:drawablePadding="8dp"
+                    android:padding="10dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Select your UPI"
+                   />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUpiID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Enter UPI"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/selectArea" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtVPA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:imeOptions="actionNext"
+                    android:visibility="gone"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/tvUpiID" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Enter amount to transfer"
+                android:textColor="@color/grey_ppi"
+                android:textSize="14dp"
+                app:fontFamily="@font/poppinsmedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llVpa" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/focus_drawable_change"
+                android:imeOptions="actionNext"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:inputType="numberDecimal"
+                android:textCursorDrawable="@drawable/color_cursor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnAddNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/add_limit"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtAmount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

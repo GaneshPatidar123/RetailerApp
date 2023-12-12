@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround"
+        tools:context=".View.Activity.BillPayment.BillPaymentActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar_back" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toTopOf="@id/btnPayBill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvServiceName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/red"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toStartOf="@+id/tvChange"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="fbdgbfdgfdg" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="CHANGE"
+                    android:textColor="@color/grey_light"
+                    app:fontFamily="@font/poppinsregular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/border_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvServiceName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMobileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/customer_mobile_number"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtMobileNUmber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_unactive_shape"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMobileNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvErrorNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/please_enter_valid_mobile_number"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtMobileNUmber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvKNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/k_number"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvErrorNumber" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtKnumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_unactive_shape"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvKNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvErrorKNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Please Enter valid value for K number"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtKnumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvoption1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/k_number"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvErrorKNumber" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtoption1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_unactive_shape"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvoption1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvoption2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/k_number"
+                    android:visibility="gone"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtoption1" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtoption2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_unactive_shape"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvoption2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFetch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/edittext_active_shape"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/main_blue"
+                    android:padding="8dp"
+                    android:text="@string/fetch_details"
+                    android:textColor="@color/main_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtoption2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llCustDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFetch">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCustName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/customer_name"
+                        android:textColor="@color/grey_ppi"
+                        android:textSize="14dp"
+                        app:fontFamily="@font/poppinsmedium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtCustName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_unactive_shape"
+                        android:clickable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCustName" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChoosePayMode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Choose payment mode"
+                        android:textColor="@color/grey_ppi"
+                        android:textSize="14dp"
+                        app:fontFamily="@font/poppinsmedium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edtCustName" />
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/edtChoosePayMode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_unactive_shape"
+                        android:drawableEnd="@drawable/ic_down"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="Please choose  Payment mode"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvChoosePayMode" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/amount"
+                        android:textColor="@color/grey_ppi"
+                        android:textSize="14dp"
+                        app:fontFamily="@font/poppinsmedium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edtChoosePayMode" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_unactive_shape"
+                        android:clickable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Min ₹10.00 - Max ₹50,000.00"
+                        android:textColor="@color/grey_ppi"
+                        android:textSize="14dp"
+                        app:fontFamily="@font/poppinsmedium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edtAmount" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnPayBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/btn_shape"
+            android:gravity="center"
+            android:padding="12dp"
+            android:clickable="false"
+            android:alpha="0.5"
+            android:text="@string/pay_bill"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

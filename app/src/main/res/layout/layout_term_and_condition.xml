@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="15dp"
+            android:text="."
+            android:gravity="center"
+            android:background="@drawable/black_rounded"
+            android:textSize="25dp"
+            app:fontFamily="@font/poppinsbold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="vdgg dfsg fdg "
+            android:textColor="@color/black_ppi"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            app:fontFamily="@font/poppinsregular"
+           app:layout_constraintStart_toEndOf="@id/tvDot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

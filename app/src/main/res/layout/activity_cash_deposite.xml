@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround"
+        tools:context=".View.Activity.addLimit.CashDepositeActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar_back" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnSend"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/backGround"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_to_take_a_limit_with_cash_deposit"
+                    android:textColor="@color/black_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_bank_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFirst" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBankName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/bank_name"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivBank" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtBankName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBankName" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvIfscCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/ifsc_code"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtBankName" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtIfscCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvIfscCode" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAccountNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/account_number"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtIfscCode" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/EdtAccountNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAccountNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBranch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/branch"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/EdtAccountNumber" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtBranch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBranch" />
+
+                <CheckBox
+                    android:id="@+id/ivChecked"
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:button="@drawable/checkbok_selector"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtBranch" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvChecked"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="24dp"
+                    android:singleLine="false"
+                    android:text="@string/i_agree_all_the_terms_conditions"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="12dp"
+                    app:fontFamily="@font/poppinsregular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivChecked"
+                    app:layout_constraintTop_toBottomOf="@id/edtBranch" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnAddBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_shape"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/add_bank"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

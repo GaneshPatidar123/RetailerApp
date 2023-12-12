@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/edittext_unactive_shape"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Mahek Sajid Shaikh"
+        android:textColor="@color/light_grey"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvAccountNumber"
+        app:layout_constraintStart_toEndOf="@id/ivSelected"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNameBank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppinsregular"
+        tools:text="ICICI"
+        android:textColor="@color/light_grey"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvAccountNumber"
+        app:layout_constraintStart_toEndOf="@id/ivSelected"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text=""
+        android:textColor="@color/light_grey"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Yes"
+        android:textColor="@color/light_grey"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

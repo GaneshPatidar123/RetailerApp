@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_dark">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/background_dark">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_First"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcOffer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="4" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ll_Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_dark_blue_shape"
+                        android:padding="14dp"
+                        android:paddingBottom="18dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rcOffer">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvWallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:fontFamily="@font/poppinslight300"
+                            android:text="@string/wallet_balance"
+                            android:textColor="@color/light_white"
+                            android:textSize="14dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvWalletAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="₹0.00"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvWallet" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAEPSWallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="26dp"
+                            android:fontFamily="@font/poppinslight300"
+                            android:text="@string/aeps_balance"
+                            android:textColor="@color/light_white"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAEPSWalletAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="₹0.00"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            app:layout_constraintStart_toStartOf="@+id/tvAEPSWallet"
+                            app:layout_constraintTop_toBottomOf="@id/tvAEPSWallet" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivRefresh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="25dp"
+                            android:src="@drawable/ic_refresh"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvWalletAmount" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnAddlimit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="31dp"
+                            android:layout_marginEnd="11dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/background_black_dark_shape"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/add_limit"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivRefresh"
+                            app:layout_constraintTop_toBottomOf="@id/tvAEPSWalletAmount" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnRecent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/background_stroke_dark_blue"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/view_recent_activity"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="16dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ll_Amount" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ll_Document_Status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/background_white_corner"
+                        android:padding="18dp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnRecent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivWebImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_mdi_web"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="@string/kyc_pending"
+                            android:textColor="@color/grey_ppi"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toEndOf="@+id/ivWebImage"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/background_verfified_shape"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ivWebImage">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivVerified"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_verfied"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="@string/kyc_pending"
+                                android:textColor="@color/text_green_dark"
+                                android:textSize="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivVerified"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFavourites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="@string/favourites"
+                    android:textColor="@color/blue_grey"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_First" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_Add_More"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/background_white_corner"
+                    android:padding="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFavourites">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ll_Add_More_In"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAddMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add_more"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="@string/add_more"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ivAddMore" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintStart_toEndOf="@id/ll_Add_More_In"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/adapter_categerous_layout" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:gravity="center"
+                        android:text="Please Click left side add button and \nAdd your Favourites"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ll_Add_More_In"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_Search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/background_white_corner"
+                    android:padding="13dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_Add_More">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/search_for_the_service_you_need"
+                        android:textColor="@color/blue_greem"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivSearch"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llRecharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_Search">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMoneyTransfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/money_transfer"
+                        android:textColor="@color/blue_grey"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvMoneyTransfer"
+                        app:spanCount="3"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/adapter_recharge" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRecharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/recharge"
+                        android:textColor="@color/blue_grey"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvMoney" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRecharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/tvRecharge"
+                        app:spanCount="3"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/adapter_recharge" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBillPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/bill_payment"
+                        android:textColor="@color/blue_grey"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvRecharge" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBillPayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvBillPayment"
+                        app:spanCount="3"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/adapter_recharge" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvInsurance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/insurance"
+                        android:textColor="@color/blue_grey"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvBillPayment" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvInsurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvInsurance"
+                        app:spanCount="3"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/adapter_recharge" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBooking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="@string/booking"
+                        android:textColor="@color/blue_grey"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvInsurance" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvBooking"
+                        app:spanCount="3"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/adapter_recharge" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvBooking">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOnlineShopping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="@string/online_shopping"
+                            android:textColor="@color/blue_grey"
+                            android:textSize="18dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvOnLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvOnlineShopping"
+                            app:spanCount="3"
+                            tools:itemCount="6"
+                            tools:listitem="@layout/adapter_recharge" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

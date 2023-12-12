@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.Activity.BuynowGiftActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar_back" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnBuy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/know_more"
+                    android:textColor="@color/light_grey"
+                    app:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/term_conditions"
+                    android:textColor="@color/light_grey"
+                    app:fontFamily="@font/poppinsregular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/llAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMore">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/llChoose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvChoose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="Choose Amount"
+                            android:padding="5dp"
+                            app:fontFamily="@font/poppinsmedium"
+                            android:textColor="@color/black_ppi"
+                            android:textSize="14dp"/>
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/edtSelectAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_down"
+                            android:background="@null"
+                            android:layout_marginStart="10dp"
+                            android:focusable="false"
+                            android:gravity="end"
+                            android:drawablePadding="5dp"
+                            android:padding="5dp"
+                            android:text="Please select Amount"
+                            android:textSize="13dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvChoose"
+                          app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/llEnterAmount"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/amount"
+                            android:textColor="@color/grey_ppi"
+                            android:textSize="14dp"
+                            app:fontFamily="@font/poppinsmedium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtAmount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/focus_drawable_change"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:imeOptions="actionNext"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMinMax"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:text="Min 100 - Max 5000"
+                            android:textColor="@color/grey_ppi"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14dp"
+                            app:fontFamily="@font/poppinsmedium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/edtAmount"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSenderMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sender_mobile_number"
+                    android:textColor="@color/grey_ppi"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/llAmount" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSenderMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSenderMobile" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSenderEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sender_email_id"
+                    android:textColor="@color/grey_ppi"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtSenderMobile" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSenderEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSenderEmail" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReceiveMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receiver_mobile_number"
+                    android:textColor="@color/grey_ppi"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14dp"
+                    android:inputType="number"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtSenderEmail" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtReceiveMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvReceiveMobile" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReceiveEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receive_email_id"
+                    android:textColor="@color/grey_ppi"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14dp"
+                    app:fontFamily="@font/poppinsmedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtReceiveMobile" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtReceiveEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/focus_drawable_change"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvReceiveEmail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnBuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/btn_shape"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/buy_now"
+            android:clickable="false"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

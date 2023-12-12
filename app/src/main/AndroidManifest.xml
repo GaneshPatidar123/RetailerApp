@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+
+    <queries>
+        <package android:name="com.example.store" />
+        <package android:name="com.example.services" />
+    </queries>
+
+    <application
+        android:name=".Utils.ApplicationClass"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+        tools:targetApi="31">
+        <activity
+            android:name=".View.Activity.MoneyTransfer.MoneyTransferActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer"/>
+        <activity
+            android:name=".View.Activity.MoneyTransfer.AepsServicesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.MoneyTransfer.AepsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.BuynowGiftActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.GiftVoucherActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.BillPayment.BillPaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.BillPayment.ElectricityBillPaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.Recharge.DthRechargeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.addLimit.CashDepositeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.addLimit.UpiPaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.addLimit.OnlinePaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.addLimit.AddLimitActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.BrowserPlanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.Recharge.MobileRechargeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.AddFavouriteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.ChangePasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer" />
+        <activity
+            android:name=".View.Activity.StepperActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.Activity.VerifyOtpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.Activity.AuthenticationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.Activity.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.Activity.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
+        <activity
+            android:name=".View.Activity.SplashActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+   <!--     <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer"
+            android:windowSoftInputMode="stateAlwaysHidden" />-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.PayPointRetailer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
